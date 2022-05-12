@@ -7,11 +7,15 @@
 }
 
 .btn:hover{
-    background-color: crimson;
+    background-color: darkmagenta;
 }
 
 .card-link{
     color: deeppink;
+}
+
+i{
+    transition: color 1s;
 }
 
 i:hover{
