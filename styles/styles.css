@@ -1,3 +1,11 @@
 .container{
-    background-color: midnightblue;
+    background-color: lavenderblush;
+}
+
+.btn{
+    transition: background-color 2s;
+}
+
+.btn:hover{
+    background-color: crimson;
 }

@@ -13,4 +13,10 @@ $f3->route('GET /', function () {
 
 });
 
+$f3->route('GET /review', function () {
+    $view = new Template();
+    echo $view->render('views/reviews.html');
+
+});
+
 $f3 ->run();
