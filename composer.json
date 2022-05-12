@@ -1,0 +1,15 @@
+{
+  "name": "328/SurveySite",
+  "description": "using fat free framework",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Xavier Denson",
+      "email": "Denson.Xavier@student.greenriver.edu"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree": "dev-master"
+  }
+}
