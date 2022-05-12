@@ -9,3 +9,11 @@
 .btn:hover{
     background-color: crimson;
 }
+
+.card-link{
+    color: deeppink;
+}
+
+i:hover{
+color: crimson;
+}
