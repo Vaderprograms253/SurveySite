@@ -21,3 +21,7 @@ i{
 i:hover{
 color: crimson;
 }
+
+.movieImg{
+    width: 400px;
+}
