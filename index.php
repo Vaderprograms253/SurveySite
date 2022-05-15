@@ -26,4 +26,16 @@ $f3->route('GET /home', function () {
     echo $view->render('views/home.html');
 });
 
+//route to login page from nav
+$f3->route('GET /login', function () {
+    $view = new Template();
+    echo $view->render('login.php');
+});
+
+//route to loggedIn page from nav
+$f3->route('GET /loggedIn', function () {
+    $view = new Template();
+    echo $view->render('loggedIn.php');
+});
+
 $f3 ->run();
