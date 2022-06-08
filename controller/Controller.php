@@ -13,7 +13,7 @@ class Controller
     }
 
     /*
-     *
+     * route for home page
      */
     function home()
     {
@@ -43,16 +43,25 @@ class Controller
         echo $view->render('views/home.html');
     }
 
+    /*
+     * route for login
+     */
     function login(){
         $view = new Template();
         echo $view->render('views/login.php');
     }
 
+    /*
+     * route to logged in
+     */
     function loggedIn(){
         $view = new Template();
         echo $view->render('views/loggedIn.php');
     }
 
+    /*
+     * route to reviews
+     */
     function reviews(){
         $view = new Template();
         echo $view->render('views/reviews.html');
