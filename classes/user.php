@@ -46,6 +46,31 @@ class User
         $this->_rating = $rating;
     }
 
+    /**
+     * @return string
+     */
+    public function getFname(): string
+    {
+        return $this->_fname;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLname(): string
+    {
+        return $this->_lname;
+    }
+
+    /**
+     * @return int
+     */
+    public function getRating(): int
+    {
+        return $this->_rating;
+    }
+
+
 
 
 }
