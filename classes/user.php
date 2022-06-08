@@ -1,5 +1,6 @@
 <?php
 /*
+ *
  * 328/SurveySite/classes/user.php
  */
 class User
@@ -10,7 +11,7 @@ class User
     private $_rating = 0;
 
     /**
-     * parameterized constructor method for
+     * parameterized constructor method for user
      * @param string $_fname
      * @param string $_lname
      * @param int $_rating
@@ -23,6 +24,7 @@ class User
     }
 
     /**
+     * Set user first name entered
      * @param string $fname
      */
     public function setFname(string $fname): void
@@ -31,6 +33,7 @@ class User
     }
 
     /**
+     * set user last name entered
      * @param string $lname
      */
     public function setLname(string $lname): void
@@ -39,6 +42,7 @@ class User
     }
 
     /**
+     * set user selected rating
      * @param int $rating
      */
     public function setRating(int $rating): void
@@ -47,6 +51,7 @@ class User
     }
 
     /**
+     * Return first name of user
      * @return string
      */
     public function getFname(): string
@@ -55,6 +60,7 @@ class User
     }
 
     /**
+     * Return last name of user
      * @return string
      */
     public function getLname(): string
@@ -63,6 +69,7 @@ class User
     }
 
     /**
+     * Return user entered rating
      * @return int
      */
     public function getRating(): int
