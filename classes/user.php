@@ -22,5 +22,30 @@ class User
         $this->_rating = $_rating;
     }
 
+    /**
+     * @param string $fname
+     */
+    public function setFname(string $fname): void
+    {
+        $this->_fname = $fname;
+    }
+
+    /**
+     * @param string $lname
+     */
+    public function setLname(string $lname): void
+    {
+        $this->_lname = $lname;
+    }
+
+    /**
+     * @param int $rating
+     */
+    public function setRating(int $rating): void
+    {
+        $this->_rating = $rating;
+    }
+
+
 
 }
