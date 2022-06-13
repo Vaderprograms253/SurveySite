@@ -1,10 +1,15 @@
 <?php
 
+// Turn on error reporting
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
+// Require the necessary files
 require_once('vendor/autoload.php');
 require 'config.php';
+
+//Start a session
+session_start();
 
 $f3 = Base::instance();
 $con = new Controller($f3);
