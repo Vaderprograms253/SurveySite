@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 
 // Require the necessary files
 require_once('vendor/autoload.php');
-require 'config.php';
+
 
 //Start a session
 session_start();
