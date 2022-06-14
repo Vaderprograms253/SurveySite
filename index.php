@@ -35,11 +35,15 @@ $f3->route('GET /home', function () {
     echo $view->render('views/home.html');
 });
 
-
 //route to loggedIn page from nav
 $f3->route('GET /loggedIn', function () {
     $view = new Template();
     echo $view->render('loggedIn.php');
+});
+
+//route to new user page from nav
+$f3->route('GET /newUser', function () {
+    $GLOBALS['con']->newUser();
 });
 
 $f3 ->run();
