@@ -6,20 +6,20 @@
 class User
 {
     //declare and initialize instance variables
-    private $_fname = "";
-    private $_lname = "";
+    private $_username = "";
+    private $_pass = "";
     private $_rating = 0;
 
     /**
      * parameterized constructor method for user
-     * @param string $_fname
-     * @param string $_lname
+     * @param string $_username
+     * @param string $_pass
      * @param int $_rating
      */
-    public function __construct(string $_fname, string $_lname, int $_rating)
+    public function __construct(string $_username, string $_pass, int $_rating)
     {
-        $this->_fname = $_fname;
-        $this->_lname = $_lname;
+        $this->_username = $_username;
+        $this->_pass = $_pass;
         $this->_rating = $_rating;
     }
 
@@ -27,18 +27,18 @@ class User
      * Set user first name entered
      * @param string $fname
      */
-    public function setFname(string $fname): void
+    public function setUsername(string $username): void
     {
-        $this->_fname = $fname;
+        $this->_username = $username;
     }
 
     /**
      * set user last name entered
      * @param string $lname
      */
-    public function setLname(string $lname): void
+    public function setPass(string $pass): void
     {
-        $this->_lname = $lname;
+        $this->_pass = $pass;
     }
 
     /**
@@ -54,18 +54,18 @@ class User
      * Return first name of user
      * @return string
      */
-    public function getFname(): string
+    public function getUsername(): string
     {
-        return $this->_fname;
+        return $this->_username;
     }
 
     /**
      * Return last name of user
      * @return string
      */
-    public function getLname(): string
+    public function getPass(): string
     {
-        return $this->_lname;
+        return $this->_pass;
     }
 
     /**
