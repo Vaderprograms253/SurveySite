@@ -98,4 +98,12 @@ class Controller
         echo $view->render('views/newUser.html');
     }
 
+    /*
+     * route to new user form
+     */
+    function addReview(){
+        $view = new Template();
+        echo $view->render('views/addReview.html');
+    }
+
 }
