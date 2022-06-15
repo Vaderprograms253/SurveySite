@@ -25,3 +25,8 @@ color: crimson;
 .movieImg{
     width: 400px;
 }
+
+.err {
+    color: darkred;
+    display: none;
+}
