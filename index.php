@@ -44,4 +44,9 @@ $f3->route('GET /newUser', function () {
     $GLOBALS['con']->newUser();
 });
 
+//route to new user page from nav
+$f3->route('GET /addReview', function () {
+    $GLOBALS['con']->addReview();
+});
+
 $f3 ->run();
