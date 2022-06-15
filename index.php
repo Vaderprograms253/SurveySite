@@ -19,7 +19,7 @@ $f3->route('GET /', function () {
 });
 
 //route to login page from nav
-$f3->route('GET /login', function () {
+$f3->route('GET|POST /login', function () {
     $GLOBALS['con']->login();
 });
 
@@ -31,14 +31,12 @@ $f3->route('GET /review', function () {
 
 //route to home page from nav
 $f3->route('GET /home', function () {
-    $view = new Template();
-    echo $view->render('views/home.html');
+   $GLOBALS['con']->home();
 });
 
 //route to loggedIn page from nav
 $f3->route('GET /loggedIn', function () {
-    $view = new Template();
-    echo $view->render('loggedIn.php');
+    $GLOBALS['con']->loggedIn();
 });
 
 //route to new user page from nav

@@ -16,7 +16,7 @@ class User
      * @param string $_pass
      * @param int $_rating
      */
-    public function __construct(string $_username, string $_pass, int $_rating)
+    public function __construct(string $_username ="", string $_pass="", int $_rating=0)
     {
         $this->_username = $_username;
         $this->_pass = $_pass;

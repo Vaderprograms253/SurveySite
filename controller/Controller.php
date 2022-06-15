@@ -17,28 +17,6 @@ class Controller
      */
     function home()
     {
-        if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-            $userName = $_POST['username'];
-            $password = $_POST['password'];
-
-            //check if user wants to sign up
-            if (isset($_POST['login'])){
-                $user = new User();
-                if (SurveyValidation::validUserName($userName)){
-                    $user->setUserName($userName);
-                } else {
-                    $this->_f3->set('errors[username]', "Please enter valid user name");
-                }
-
-                if (SurveyValidation::validPassword($password)){
-                    $user->setUserPassword($password);
-                } else {
-                    $this->_f3->set('errors[password]', "Please enter valid password");
-                }
-            }
-
-
-        }
         $view = new Template();
         echo $view->render('views/home.html');
     }
@@ -47,6 +25,35 @@ class Controller
      * route for login
      */
     function login(){
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $userName = $_POST['username'];
+            $password = $_POST['password'];
+
+            //check if user wants to sign up
+            $user = new User();
+            if (SurveyValidation::validUsername($userName)){
+                $user->setUserName($userName);
+            } else {
+                $this->_f3->set('errors[username]', "Please enter valid user name");
+            }
+
+            if (SurveyValidation::validPassword($password)){
+                $user->setPass($password);
+            } else {
+                $this->_f3->set('errors[password]', "Please enter valid password");
+            }
+
+           // $_SESSION['user'] = $user;
+            //TODO: validate user is in database
+
+
+            if (empty($this->_f3->get('errors'))){
+                header('location: review');
+            }
+
+
+        }
         $view = new Template();
         echo $view->render('views/login.php');
     }
@@ -63,7 +70,14 @@ class Controller
      * route to reviews
      */
     function reviews(){
-        $view = new Template();
+
+        $user = $_SESSION['user'];
+        $rating = $_POST['rating'];
+
+     //   if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+       //     $user->setRating($rating);
+       // }
+            $view = new Template();
         echo $view->render('views/reviews.html');
     }
 
