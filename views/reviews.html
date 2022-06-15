@@ -10,7 +10,7 @@
                 <a class="nav-link" href="home">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="login">Login</a>
+                <a class="nav-link" href="logout">Logout</a>
             </li>
         </ul>
     </div>
@@ -30,8 +30,53 @@
                     <i class="fa-solid fa-face-frown-open fa-2x"></i>
                     <i class="fa-solid fa-face-rolling-eyes fa-2x"></i>
                 </p>
-                <a href="#" class="card-link">Previous Reviews</a>
-                <a href="#" class="card-link">Add Review</a>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#netflixModal">Add Review</button>
+                <div class="modal" id="netflixModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Netflix</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <form action="#">
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" id="netExcellent" name="rating" value="5">Excellent - 5
+                                    <label class="form-check-label" for="netExcellent"></label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" id="netGreat" name="rating" value="4">Great - 4
+                                    <label class="form-check-label" for="netGreat"></label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" id="netGood" name="rating" value="3">Good - 3
+                                    <label class="form-check-label" for="netGood"></label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" id="netSubpar" name="rating" value="2">Subpar - 2
+                                    <label class="form-check-label" for="netSubpar"></label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" id="netTerrible" name="rating" value="1">Terrible - 1
+                                    <label class="form-check-label" for="netTerrible"></label>
+                                </div>
+                                    <button type="submit" class="btn btn-secondary">Submit</button>
+                                </form>
+
+
+                            </div>
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         </div>
@@ -46,8 +91,53 @@
                         <i class="fa-solid fa-face-frown-open fa-2x"></i>
                         <i class="fa-solid fa-face-rolling-eyes fa-2x"></i>
                     </p>
-                    <a href="#" class="card-link">Previous Reviews</a>
-                    <a href="#" class="card-link">Add Review</a>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#huluModal">Add Review</button>
+                    <div class="modal" id="huluModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Hulu</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <form action="#">
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" id="huluExcellent" name="rating" value="5">Excellent - 5
+                                            <label class="form-check-label" for="huluExcellent"></label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" id="huluGreat" name="rating" value="4">Great - 4
+                                            <label class="form-check-label" for="huluGreat"></label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" id="huluGood" name="rating" value="3">Good - 3
+                                            <label class="form-check-label" for="huluGood"></label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" id="huluSubpar" name="rating" value="2">Subpar - 2
+                                            <label class="form-check-label" for="huluSubpar"></label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" id="huluTerrible" name="rating" value="1">Terrible - 1
+                                            <label class="form-check-label" for="huluTerrible"></label>
+                                        </div>
+                                        <button type="submit" class="btn btn-secondary">Submit</button>
+                                    </form>
+
+
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -62,8 +152,53 @@
                         <i class="fa-solid fa-face-frown-open fa-2x"></i>
                         <i class="fa-solid fa-face-rolling-eyes fa-2x"></i>
                     </p>
-                    <a href="#" class="card-link">Previous Reviews</a>
-                    <a href="#" class="card-link">Add Review</a>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hboModal">Add Review</button>
+                    <div class="modal" id="hboModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">HBO Max</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <form action="#">
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" id="hboExcellent" name="rating" value="5">Excellent - 5
+                                            <label class="form-check-label" for="hboExcellent"></label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" id="hboGreat" name="rating" value="4">Great - 4
+                                            <label class="form-check-label" for="hboGreat"></label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" id="hboGood" name="rating">Good - 3
+                                            <label class="form-check-label" for="hboGood"></label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" id="hboSubpar" name="rating">Subpar - 2
+                                            <label class="form-check-label" for="hboSubpar"></label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" id="hboTerrible" name="rating">Terrible - 1
+                                            <label class="form-check-label" for="hboTerrible"></label>
+                                        </div>
+                                        <button type="submit" class="btn btn-secondary">Submit</button>
+                                    </form>
+
+
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -78,9 +213,53 @@
                         <i class="fa-solid fa-face-frown-open fa-2x"></i>
                         <i class="fa-solid fa-face-rolling-eyes fa-2x"></i>
                     </p>
-                    <a href="#" class="card-link">Previous Reviews</a>
-                    <a href="#" class="card-link">Add Review</a>
-                </div>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#amzModal">Add Review</button>
+                    <div class="modal" id="amzModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Amazon Prime</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <form action="#">
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" id="amzExcellent" name="rating" value="5">Excellent - 5
+                                            <label class="form-check-label" for="amzExcellent"></label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" id="amzGreat" name="rating" value="4">Great - 4
+                                            <label class="form-check-label" for="amzGreat"></label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" id="amzGood" name="rating" value="3">Good - 3
+                                            <label class="form-check-label" for="amzGood"></label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" id="amzSubpar" name="rating" value="2">Subpar - 2
+                                            <label class="form-check-label" for="amzSubpar"></label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" id="amzTerrible" name="rating" value="1">Terrible - 1
+                                            <label class="form-check-label" for="amzTerrible"></label>
+                                        </div>
+                                        <button type="submit" class="btn btn-secondary">Submit</button>
+                                    </form>
+
+
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>                </div>
                 <div class="col">
                     <div class="card">
                         <div class="card-body">
@@ -92,9 +271,53 @@
                                 <i class="fa-solid fa-face-frown-open fa-2x"></i>
                                 <i class="fa-solid fa-face-rolling-eyes fa-2x"></i>
                             </p>
-                            <a href="#" class="card-link">Previous Reviews</a>
-                            <a href="#" class="card-link">Add Review</a>
-                        </div>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#disneyModal">Add Review</button>
+                            <div class="modal" id="disneyModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Hulu</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <form action="#">
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" id="dsnyExcellent" name="rating" value="5">Excellent - 5
+                                                    <label class="form-check-label" for="dsnyExcellent"></label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" id="dsnyGreat" name="rating" value="4">Great - 4
+                                                    <label class="form-check-label" for="dsnyGreat"></label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" id="dsnyGood" name="rating" value="3">Good - 3
+                                                    <label class="form-check-label" for="dsnyGood"></label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" id="dsnySubpar" name="rating" value="2">Subpar - 2
+                                                    <label class="form-check-label" for="dsnySubpar"></label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" id="dsnyTerrible" name="rating" value="1">Terrible - 1
+                                                    <label class="form-check-label" for="dsnyTerrible"></label>
+                                                </div>
+                                                <button type="submit" class="btn btn-secondary">Submit</button>
+                                            </form>
+
+
+                                        </div>
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>                        </div>
                     </div>
                 </div>
             </div>

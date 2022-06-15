@@ -68,15 +68,21 @@ if (!empty($_POST)){
 
     <h1>Login Page</h1>
 
-    <form action="#" method="post">
+    <form action="#" method="POST">
         <div class="form-group">
             <label for="username">Username</label>
             <input type="text" class="form-control" id="username" placeholder="user" name="username"
                    value="<?php echo $un; ?>">
+            <check if="{{ isset(@errors['username'])}}">
+                <span class="err">{{ @errors['username'] }}</span>
+            </check>
         </div>
         <div class="form-group">
             <label for="password">Password</label>
             <input type="password" class="form-control" id="password" placeholder="pass" name="password" >
+            <check if="{{ isset(@errors['password'])}}">
+                <span class="err">{{ @errors['password'] }}</span>
+            </check>
         </div>
         <!--error message if invalid login-->
         <?php
@@ -85,7 +91,10 @@ if (!empty($_POST)){
         }
         ?>
 
-        <button type="submit" class="btn btn-primary">Login</button>
+        <input type="submit" class="btn btn-secondary">
+        <check if="{{ isset(@errors['userLogin'])}}">
+            <span class="err">{{ @errors['userLogin'] }}</span>
+        </check>
     </form>
 
 </div>

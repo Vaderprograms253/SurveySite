@@ -26,9 +26,11 @@ class Controller
      */
     function login(){
 
+        var_dump($_POST);
+
         if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-            $userName = $_POST['username'];
-            $password = $_POST['password'];
+            $userName = trim($_POST['username']);
+            $password = trim($_POST['password']);
 
             //check if user wants to sign up
             $user = new User();
@@ -44,7 +46,14 @@ class Controller
                 $this->_f3->set('errors[password]', "Please enter valid password");
             }
 
-           // $_SESSION['user'] = $user;
+            $_SESSION['user'] = $user;
+
+            if (SurveyValidation::validUser($userName, $password)){
+                $_SESSION['loggedIn'] = true;
+            } else {
+                $this->_f3->set('errors[userLogin]' , "Invalid login");
+            }
+
             //TODO: validate user is in database
 
 
