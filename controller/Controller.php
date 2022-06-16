@@ -117,7 +117,6 @@ class Controller
     }
 
     /*
-<<<<<<< HEAD
      * route user back to home page
      */
     function logout(){
@@ -125,13 +124,6 @@ class Controller
         session_destroy();
         $view = new Template();
         echo $view->render('views/home.html');
-=======
-     * route to new user form
-     */
-    function addReview(){
-        $view = new Template();
-        echo $view->render('views/addReview.html');
->>>>>>> refs/remotes/origin/main
     }
 
 }
