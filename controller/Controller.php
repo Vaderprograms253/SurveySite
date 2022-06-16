@@ -35,7 +35,7 @@ class Controller
             //check if user wants to sign up
             $user = new User();
             if (SurveyValidation::validUsername($userName)){
-                $user->setUserName($userName);
+                $user->setUsername($userName);
             } else {
                 $this->_f3->set('errors[username]', "Please enter valid user name");
             }
@@ -58,7 +58,9 @@ class Controller
 
 
             if (empty($this->_f3->get('errors'))){
-                header('location: review');
+                if ($_SESSION['loggedIn'] == true){
+                    header('location: review');
+                }
             }
 
 
@@ -68,18 +70,9 @@ class Controller
     }
 
     /*
-     * route to logged in
-     */
-    function loggedIn(){
-        $view = new Template();
-        echo $view->render('views/loggedIn.php');
-    }
-
-    /*
      * route to reviews
      */
     function reviews(){
-
         $user = $_SESSION['user'];
         $rating = $_POST['rating'];
 
@@ -94,8 +87,43 @@ class Controller
      * route to new user form
      */
     function newUser(){
+
+        $username = trim($_POST['user']);
+        $password = trim($_POST['password']);
+        $passwordConfirm = $_POST['password-con'];
+        var_dump($_POST);
+        if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+            //check if username already exists
+            //if false add to database
+            if (SurveyValidation::validNewUser($username, $password, $passwordConfirm)){
+                $user = $this->newUser();
+                $user->setUsername($username);
+                $user->setPass($password);
+
+            } else {
+                $this->_f3->set('errors[validLogin]' , "Invalid login");
+            }
+
+        }
+
+        if (empty($this->_f3->get('errors'))){
+            if ($_SESSION['loggedIn'] == true){
+                header('location: review');
+            }
+        }
         $view = new Template();
         echo $view->render('views/newUser.html');
+    }
+
+    /*
+     * route user back to home page
+     */
+    function logout(){
+
+        session_destroy();
+        $view = new Template();
+        echo $view->render('views/home.html');
     }
 
 }

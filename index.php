@@ -35,12 +35,12 @@ $f3->route('GET /home', function () {
 });
 
 //route to loggedIn page from nav
-$f3->route('GET /loggedIn', function () {
-    $GLOBALS['con']->loggedIn();
+$f3->route('GET /logout', function () {
+    $GLOBALS['con']->logout();
 });
 
 //route to new user page from nav
-$f3->route('GET /newUser', function () {
+$f3->route('GET|POST /newUser', function () {
     $GLOBALS['con']->newUser();
 });
 

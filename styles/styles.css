@@ -27,6 +27,5 @@ color: crimson;
 }
 
 .err {
-    color: darkred;
-    display: none;
+    color: red;
 }
