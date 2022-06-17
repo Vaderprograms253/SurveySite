@@ -11,4 +11,4 @@ of this site is ongoing and this will be updated as such to reflect future chang
 - The critic class extends the user class
 - The review page will allow a user to leave a review and see a confirmation for it.
 
-![](C:\Users\Xavier\Desktop\328\328\328\SurveySite\ulm.png)
+![Uml](https://github.com/Vaderprograms253/SurveySite/blob/main/images/uml.png?raw=true "This is our uml diagram")
