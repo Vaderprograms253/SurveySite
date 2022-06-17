@@ -96,6 +96,9 @@ if (!empty($_POST)){
             <span class="err">{{ @errors['userLogin'] }}</span>
         </check>
     </form>
+    <div class="col">
+        <img src="images/netflix.jpg" class="movieImg m-3 rounded" alt="netflix image">
+    </div>
 
 </div>
 

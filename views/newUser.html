@@ -11,7 +11,7 @@
                 <a class="nav-link" href="home">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="login">Login</a>
+                <a class="nav-link" id="loginLogout" href="login">Login</a>
             </li>
         </ul>
     </div>
@@ -20,21 +20,36 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <form id="newUser-form">
+            <form action="#" method="POST" id="newUser-form">
                 <h3>Add New User</h3>
                 <div class="m-3">
-                    <label for="username">Username:
+                    <label class="form-label" for="username">Username:
                     </label>
-                    <input type="text" id="username">
-                    <span class="err" id="err-username">Please enter user name</span>
+                    <input class="form-control" type="text" id="username" name="user">
+                    <check if="{{ isset(@errors['username'])}}">
+                        <span class="err" id="err-username">Please enter user name</span>
+                    </check>
                 </div>
                 <div class="m-3">
-                    <label for="password">Password:
+                    <label class="form-label" for="password">Password:
                     </label>
-                    <input type="text" id="password">
-                    <span class="err" id="err-password">Please enter password</span>
+                    <input class="form-control" type="password" id="password" name="password">
+                    <check if="{{ isset(@errors['password'])}}">
+                        <span class="err" id="err-password">Please enter password</span>
+                    </check>
+                </div>
+                <div class="m-3">
+                    <label class="form-label" for="password-con">Confirm Password:
+                    </label>
+                    <input class="form-control" type="password" id="password-con" name="password-con">
+                    <check if="{{ isset(@errors['password'])}}">
+                        <span class="err" id="err-password-con">Please enter password</span>
+                    </check>
                 </div>
                 <button class="btn btn-primary m-3" type="submit">Add User</button>
+                <check if="{{ isset(@errors['validLogin'])}}">
+                <span class="err" id="err">{{ @errors['validLogin'] }}</span>
+            </check>
             </form>
         </div>
     </div>
