@@ -11,4 +11,4 @@ of this site is ongoing and this will be updated as such to reflect future chang
 - The critic class extends the user class
 - The review page will allow a user to leave a review and see a confirmation for it.
 
-![Alt text](images/ulm.png "This is some image...")
+![](C:\Users\Xavier\Desktop\328\328\328\SurveySite\ulm.png)
