@@ -26,7 +26,7 @@ class Controller
      */
     function login(){
 
-        var_dump($_POST);
+       // var_dump($_POST);
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             $userName = trim($_POST['username']);
@@ -73,12 +73,18 @@ class Controller
      * route to reviews
      */
     function reviews(){
+     //   var_dump($_POST);
+
         $user = $_SESSION['user'];
         $rating = $_POST['rating'];
 
-     //   if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-       //     $user->setRating($rating);
-       // }
+       if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $user->setRating($rating);
+           $_SESSION['user'] = $user;
+           header('location: confirmation');
+       }
+
+       $_SESSION['user'] = $user;
             $view = new Template();
         echo $view->render('views/reviews.html');
     }
@@ -91,7 +97,7 @@ class Controller
         $username = trim($_POST['user']);
         $password = trim($_POST['password']);
         $passwordConfirm = $_POST['password-con'];
-        var_dump($_POST);
+      //  var_dump($_POST);
         if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
             //check if username already exists
@@ -124,6 +130,12 @@ class Controller
         session_destroy();
         $view = new Template();
         echo $view->render('views/home.html');
+    }
+
+    function confirm(){
+     //   var_dump($_POST);
+        $view = new Template();
+        echo $view->render(('views/confirmation.html'));
     }
 
 }

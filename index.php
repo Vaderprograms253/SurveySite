@@ -25,8 +25,13 @@ $f3->route('GET|POST /login', function () {
 
 
 //route to review page
-$f3->route('GET /review', function () {
+$f3->route('GET|POST /review', function () {
     $GLOBALS['con']->reviews();
+});
+
+//route to confirmation
+$f3->route('GET /confirmation', function (){
+    $GLOBALS['con']->confirm();
 });
 
 //route to home page from nav
@@ -44,9 +49,6 @@ $f3->route('GET|POST /newUser', function () {
     $GLOBALS['con']->newUser();
 });
 
-//route to new user page from nav
-$f3->route('GET /addReview', function () {
-    $GLOBALS['con']->addReview();
-});
+
 
 $f3 ->run();
